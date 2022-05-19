@@ -13,13 +13,40 @@
     <h3>Output</h3>
     <p id="textOutput"></p>
     <script>
-      var textInput = $("#textInput");
-      var textOutput = $("#textOutput");
-      var convertButton = $("#convertButton");
+      const textInput = $("#textInput");
+      const textOutput = $("#textOutput");
+      const convertButton = $("#convertButton");
+      
+      var bionicReaderSettings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://bionic-reading1.p.rapidapi.com/convert",
+        "method": "POST",
+        "headers": {
+          "content-type": "application/x-www-form-urlencoded",
+          "X-RapidAPI-Host": "bionic-reading1.p.rapidapi.com",
+          "X-RapidAPI-Key": "1ded8cf890msh5037887e02fcf05p1f2011jsn72f6214618de"
+        },
+        "data": {
+          "content": "",
+          "response_type": "html",
+          "request_type": "html",
+          "fixation": "1",
+          "saccade": "10"
+        }
+      };
+
+      $.ajax(settings).done(function (response) {
+        console.log(response);
+      });
       
       $(document).ready(function(){
         convertButton.click(function(){
-          textOutput.text(textInput.val());
+          bionicReaderSettings.data.content= textInput.val();
+          $.ajax(bionicReaderSettings).done(function(response){
+            console.log(response);
+            textOutput.text(response);
+          });
         });
       });
     </script>
