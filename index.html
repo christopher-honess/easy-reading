@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My GitHub Pages Site</title>
+    <title>Easy Reading</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+      var textInput = $("#textInput");
+      var textOutput = $("#textOutput");
+      var convertButton = $("#convertButton");
+      
+      $(document).ready(function(){
+        convertButton.click(function(){
+          textOutput.text(textInput.text());
+        };
+      });
+    </script>
   </head>
   <body>
-    <h1>Hello world!</h1>
-    <p>Welcome to my GitHub Pages site!</p>
+    <h1>Easy Reading</h1>
+    <p>Use the Bionic Reading API to read text easier</p>
+    <h2>Text Input</h2>
+    <input type="text" id="textInput">
+    <input type="button" value="convertButton">
+    <h3>Output</h3>
+    <p id="textOutput"></p>
   </body>
 </html>
