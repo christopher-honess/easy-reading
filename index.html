@@ -13,10 +13,13 @@
     <h3>Output</h3>
     <p id="textOutput"></p>
     <script>
+      var textInput = $("#textInput");
+      var textOutput = $("#textOutput");
+      var convertButton = $("#convertButton");
       
       $(document).ready(function(){
-        $("#convertButton").click(function(){
-          $("#textOuput").text($("#textInput").val());
+        convertButton.click(function(){
+          textOutput.text(textInput.val());
         });
       });
     </script>
