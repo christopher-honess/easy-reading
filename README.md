@@ -4,9 +4,9 @@ You can use the [editor on GitHub](https://github.com/christopher-honess/easy-re
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+### Easy Reading
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+A simple app to convert text using the Bionic Reading API
 
 ```markdown
 Syntax highlighted code block
