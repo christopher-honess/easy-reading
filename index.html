@@ -41,7 +41,7 @@
           bionicReaderSettings.data.content= textInput.val();
           $.ajax(bionicReaderSettings).done(function(response){
             console.log(response);
-            textOutput.text(response);
+            textOutput.html(response);
           });
         });
       });
